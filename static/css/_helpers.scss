@@ -1,0 +1,110 @@
+/* Padding And Margin */
+
+/*"m" or "p" for margin or padding
+"t", "b", "l", or "r" for top, bottom, left or right
+plus the number of spacing in pixels*/
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30); 
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+	/*margin*/
+	.mg-#{$space} {
+		@each $side in $sides {
+      		margin-#{$side}: #{$space}px;
+      	}
+    }
+    
+   /*padding*/
+    .pd-#{$space} {
+    	@each $side in $sides {
+      		padding-#{$side}: #{$space}px;
+      	}
+    }
+
+    /*margin, padding all sides*/
+ 	@each $side in $sides {
+	    .mg-#{str-slice($side, 0, 1)}-#{$space} {
+	      	margin-#{$side}: #{$space}px;
+	    }
+	  
+	    .pd-#{str-slice($side, 0, 1)}-#{$space} {
+	      	padding-#{$side}: #{$space}px;
+	    }
+  	}
+}
+
+/* auto */
+.mg-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.mh-100 {
+    min-height: 100vh;
+}
+
+.mh-50 {
+    min-height: 50vh;
+}
+
+.overflow-v {
+    overflow: visible;
+}
+
+.overflow-h {
+    overflow: hidden;
+}
+
+.overflow-s {
+    overflow-y: scroll;
+}
+
+.v-align-m {
+    vertical-align: middle;
+}
+
+.z-index-10 {
+    z-index: 10;
+}
+
+/* colors */
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.tx-grey {
+    color: $mediumGrey;
+}
+
+.tx-white {
+    color: $white;
+}
+
+.tx-center {
+    text-align: center;
+}
+
+.tx-left {
+    text-align: left;
+}
+
+.tx-transform {
+    text-transform: capitalize;
+}
+
+/* End - colors */
+/* End - Padding And Margin */

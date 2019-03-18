@@ -1,0 +1,115 @@
+.two-col {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+.textBox {
+    font-size: 14px;
+    padding: 5px;
+    min-height: 30px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px #fff;
+
+    &::-moz-selection { /* Code for Firefox */
+        background-color: #063d62;
+    }
+
+    &::selection {
+        background-color: #063d62;
+    }
+}
+
+.brd {
+    border: 1px solid $lightGrey;
+}
+
+.br-t {
+    border-top: solid 1px #dcdcdc;
+}
+
+/*form elements*/
+
+.input-field {
+    display: inline-block;
+    float: left;
+    max-width: 450px;
+    min-width: 320px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 15px;
+    padding: .6em .9em;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 3px #ddd;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* End - form elements */
+
+/* file upload */
+
+.fileupload {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background: #fafafa;
+    border-radius: 4px;
+    border: solid 1px #f6f6f6;
+
+    &__heading {
+        display: inline-block;
+        float: left;
+        width: auto;
+        padding-right: 10px;
+        color: #4a4a4a;
+    }
+
+    &__button {
+        position: relative;
+        float: left;
+        min-width: 200px;
+        text-align: center;
+        overflow: hidden;
+
+        input[type=file].hidden {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            padding: 14px 20px;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+.btn-a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--blue {
+        background-color: #fff;
+        border: 1px solid $blue;
+        color: $blue;
+
+        &:hover {
+            background-color: $blue;
+            border: 1px solid #30b3ee;
+            color: #fff;
+            box-shadow: 0 3px 15px rgba(0,0,0,.2);
+        }
+    }
+}
+
+/*End - file upload */

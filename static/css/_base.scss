@@ -1,0 +1,212 @@
+/* variables - colors */
+$white: #fff;
+$black: #000;
+$lightGrey: #f7f8fc;
+$mediumGrey: #4a4a4a;
+$blue: #0084dd;
+
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+@import url('../../node_modules/angularjs-datepicker/dist/angular-datepicker.min.css');
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	display: block;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 1.875;
+    line-height: normal;
+    overflow-x: hidden;
+    margin: 0 auto;
+    color: $black;
+    background-color: $lightGrey;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+    overflow-y: scroll;
+}
+
+section,
+footer,
+header {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-transform: capitalize;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a {
+    &.disabled {
+        background-color: #f2f2f2;
+        color: #cbcbcb;
+        border: 1px solid #cbcbcb; 
+       pointer-events: none;
+       cursor: default;
+        
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+h2 {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 1;
+}
+
+hr {
+    height: 1px;
+    margin: 25px 0;
+    box-sizing: content-box;
+    border: none;
+    background-color: #DDD;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+hr {
+    clear: both;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+pre,
+textarea {
+    overflow: auto;
+}
+
+p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: justify;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.header,
+.footer {
+    color: #757575;
+}
+
+.header {
+    border-bottom: solid 1px #dcdcdc;
+}
+
+.footer {
+    padding: 20px;
+    font-size: 14px;
+    background-color: #fafafa;
+    border-top: 1px solid #e5e5e5;
+}
+
+.sectionContainer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &--main {
+        min-height: calc(100vh - 50px); /*header + footer height*/
+    }
+
+    &--tablet {
+        @include breakpoint(tablet) {
+            margin-top: 38px;
+        }
+    }
+
+}
+
+.d-block {
+    display: block;
+}
+
+.d-iblock {
+    display: inline-block;
+}
+
+.mw-1200 {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -1,0 +1,43 @@
+/* Haader - Main Menu */
+.menu {
+    display: block;
+    width: auto;
+    float: right;
+    padding: 0;
+    height: auto;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+
+	&__item {
+		margin: 0px;
+		display: inline-block;
+		float: left;
+
+		&:hover {  
+			background-color: #fff;
+		}
+
+		a {
+			display:block;
+			padding: 20px;	
+			color: #757575;
+			font-size: 14px;
+			text-decoration: none;
+			border-bottom: solid 4px transparent;
+
+			&:hover {  
+				color: #000;
+				border-bottom: solid 4px #0093d9;
+			}
+		}
+
+		&.active {
+			a {
+				color: #000;
+				border-bottom: solid 4px #0093d9;
+			}
+		}
+	}
+}
+/* End - Header Main Menu */

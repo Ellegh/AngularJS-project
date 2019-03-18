@@ -1,0 +1,201 @@
+<section class="sectionContainer mw-1200 h-100 pd-b-25 pd-20 tx-center">
+    <!-- <h1 class="mg-t-0 tx-grey">{{taskOneCtrl.appService.serviceVar}} &#40;{{taskOneCtrl.homeVar}}&#41;</h1> -->
+
+    <div class="sectionContainer">
+    	<!-- <h2 class="fileupload__heading">Please Select a CSV file&#58;</h2> -->
+    	<!-- file upload -->
+		<!-- <label for="csvfile" class="fileupload__button btn-a btn-a--blue">
+			Upload a file
+			<input 
+				id="csvfile" 
+				name="csvfile"
+				type="file"
+				class="hidden" 
+				file-reader="fileContent" 
+				fileReader />
+		</label> --> <!-- End - file upload -->
+
+		<!-- <h2 class="fileupload__heading">LocalStorage + Angular&#58;</h2><br/><br/>
+      <p>Add to local storage:<br/>
+        Event ID: <input type="text" ng-model="MyModel.WriteKey" /><br/>
+        Event Name: <input type="text" ng-model="MyModel.WriteValue" /><br/>
+        Event Description: <input type="text" ng-model="MyModel.WriteDescription" /><br/>
+        Event Speaker: <input type="text" ng-model="MyModel.WriteSpeaker" /><br/>
+        <button type="button" ng-click="WriteToStorage()">Write to Storage</button>
+      </p>
+      
+      <p>
+        Retrieve from local storage:<br/>
+        Event ID: <input type="text" ng-model="MyModel.ReadKey" /><br/>
+        Event Name: {{MyModel.ReadValue}}<br/>
+        Event Description: {{MyModel.ReadValue}}<br/>
+        Event Speaker: {{MyModel.ReadValue}}<br/>
+        <button type="button" ng-click="ReadFromStorage()">Read from Storage</button>
+      </p>
+      
+      <p>
+        {{MyModel.Test}}
+      </p> -->
+
+
+      <!-- <form>
+       <div class = "form-group">
+          <label for = "url">Enter the url to authenticate:</label>
+          <input type = "text" class = "form-control"  placeholder = "Enter the URL" ng-model="api_url" required="required">
+       </div>
+
+        <div class = "form-group">
+          <label for = "Key">Enter the key here:</label>
+          <textarea class = "form-control" rows="5"  placeholder = "Enter the Key" ng-model="api_token" required="required"></textarea>
+       </div>
+
+       <button class = "btn btn-default" ng-click="submit()">Explore!!</button>
+       <p class="warning">{{failed}}</p>
+    </form> -->
+
+
+
+
+
+    <div class="splash">
+		    <h2>Loading</h2>
+		  </div>
+		  <div class="container">
+		    <section class="app-body">
+
+		   	<!-- <form ng-submit="addTodo()" class="todo-form overflow-v">
+		        <input type="text" ng-model="title" placeholder="Enter new Event Name" />
+		        <input type="text" ng-model="field" placeholder="Enter new Event Field" />
+		        <input type="text" ng-model="speaker" placeholder="Enter new event Speaker" />
+		        <input type="text" ng-model="description" placeholder="Enter new event Description" />
+		        <datepicker date-format="yyyy-MM-dd" class="w300" >
+				  <input ng-model="date" type="text" autocomplete="off" placeholder="Select new event Date"/>
+				</datepicker>
+		        
+		        <br />
+		        <input type="submit" value="Add Item" class="btn-a btn-a--blue mg-t-30" />
+		      </form> -->
+		      <input type="button" ng-click="addNewEvent();" value="Add New Event" class="btn-a btn-a--blue mg-t-30" />
+
+		     <div class="o-search">
+		        <!-- search status -->
+		        <div class="o-search__input--container">
+		          <input 
+		          	type="search" 
+		          	class="o-search__input" 
+		          	placeholder="Search" 
+		          	ng-model="searchText"
+		          	ng-model-options="{ debounce: 100 }" autofocus>
+		          
+		          <div class="o-search__input__icon o-search__input__icon--left">
+		            <svg class="o-search__icon" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+		              <title>Icon Search</title>
+		              <g stroke-width="2" stroke-linejoin="round" fill="none" fill-rule="evenodd">
+		                <path d="M17.5 9.5c0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.42 3.582-8 8-8s8 3.58 8 8z"></path>
+		                <path d="M15.156 15.156L24.5 24.5" stroke-linecap="round"></path>
+		              </g>
+		            </svg>
+		          </div>
+		        </div>
+
+        <ul class="o-search__results">
+          <!-- ngRepeat: user in (main.filteredUsers = (main.users | searchFor:main.search)) -->
+        </ul>
+      </div>
+
+		      <table>
+		        <thead>
+		          <tr>
+		          	<th>Event ID</th>
+		            <th>Event Title</th>
+		            <th>Event Field</th>
+		             <th>Event Speaker</th>
+		             <th> Event Date</th>
+		            <!-- <th> Event Description</th> -->
+		            <!-- <th> Edit</th> -->
+		            <!-- <th class="chk">
+		              In progress
+		            </th> -->
+		            <th class="chk">Done</th>
+		            <th> Remove</th>
+		             <th> Details</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr ng-repeat="todo in filteredtodos track by $index" >
+		          	<td>
+		              <span class="done-{{ todo.doneProd || todo.doneDev }}" ng-bind="todo.id"></span>
+		            </td>
+		            <td>
+		              <span class="done-{{ todo.doneProd || todo.doneDev }}" ng-bind="todo.title"></span>
+		            </td>
+		            <td>
+		              <span class="done-{{ todo.doneProd || todo.doneDev }}" ng-bind="todo.field"></span>
+		            </td>
+		            <td>
+		              <span class="done-{{ todo.doneProd || todo.doneDev }}" ng-bind="todo.speaker"></span>
+		            </td>
+		            <td>
+		              <span class="done-{{ todo.doneProd || todo.doneDev }}" ng-bind="todo.date"></span>
+		            </td>
+		            <!-- <td>
+		              <span class="done-{{ todo.doneProd || todo.doneDev }}" ng-bind="todo.description"></span>
+		            </td> -->
+		           <!--  | date: 'dd-MM-yyyy' <td>
+		              <a ng-click="edit($index)"><i class="fa fa-pencil-square-o"></i></a>
+		            </td> -->
+		            <!-- <td class="chk">
+		              <input type="checkbox" ng-model="todo.doneProd" ng-change="checkboxClick()">
+		            </td> -->
+		            <td class="chk">
+		              <input type="checkbox" ng-model="todo.doneDev" ng-change="checkboxClick()">
+		            </td>
+		             <td>
+		              <a ng-click="delete($index)"><i class="fa fa-times"></i></a>
+		            </td>
+		            <td>
+		              <a ng-click="rowClick('taskTwo', todo);">More Details</a>
+		            </td>
+		          </tr>
+		        </tbody>
+		      </table>
+
+		      <section class="archive-control">
+		        <span>{{ remaining() }} of {{ todos.length }} remaining</span>
+		        <a class="fr" href="" ng-click="archive()" ng-show="remaining() < todos.length">Remove Completed Events</a>
+		        <!-- <pagination 
+					ng-model="currentPage"
+					total-items="todos.length"
+					max-size="maxSize"  
+					boundary-links="true">
+				</pagination> -->
+		      </section>
+		    </section>
+		  </div>
+
+
+
+
+
+
+    </div>
+</section>
+
+<section class="container bg-blue">
+	<div class="container mw-1200">
+		<!-- Original data -->
+		<div class="two-col tx-white">
+			<h2>Original</h2>
+			<!-- <div class="textBox" ng-repeat="row in rows track by $index">{{row}}</div> -->
+		</div> <!-- End - Original data -->
+		<!-- Processed data -->
+		<div class="two-col tx-white">
+			<h2>Processed</h2>
+			<!-- <div class="textBox" ng-repeat="data in processedData track by $index">
+				<span ng-repeat="col in data track by $index">{{ col }}<span ng-if="$index != valuesLen">{{delimiter}}</span></span> 
+			</div> -->
+		</div> <!-- End - Processed data -->
+
+		
+	</div>
+</section>
